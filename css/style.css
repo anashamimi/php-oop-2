@@ -5,3 +5,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.color-circle{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.light-blue{
+    background-color: lightblue;
+}
+
+.black{
+    background-color: black;
+}
+
+.ah-logo{
+    width: 30px;
+}
