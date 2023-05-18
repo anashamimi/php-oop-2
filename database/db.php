@@ -18,7 +18,7 @@ $products = [
     'https://arcaplanet.vtexassets.com/arquivos/ids/273530-1800-1800/pedigree-biscrock-gravy-bones.jpg?v=1770742390&quality=1&width=1800&height=1800', 
     '29/09/2024', '400'),
 
-    new Accessory('5', 'Trasportino', 'fr', '10.79', 'Gipsy di Croci', 'gatto', 
+    new Accessory('5', 'Trasportino', 'fr', '10.79', 'Gipsy di Croci', 'gto', 
     'https://arcaplanet.vtexassets.com/arquivos/ids/261413-1800-1800/GIPSY_ROSSO-copia.jpg?v=1770742485&quality=1&width=1800&height=1800', 
     'red', 'plastica'),
 

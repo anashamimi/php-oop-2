@@ -1,9 +1,9 @@
 <?php 
 include __DIR__ . '/Accessory.php';
 include __DIR__ . '/Food.php';
-class Product{
-    public
-    $id, $name, $price, $nationality, $brand, $category, $image;
+
+class Product {
+    public $id, $name, $price, $nationality, $brand, $category, $image;
 
     public function __construct($id, $name, $nationality, $price, $brand, $category, $image) {
         $this->id = $id;
@@ -11,7 +11,13 @@ class Product{
         $this->nationality = $nationality;
         $this->price = $price;
         $this->brand = $brand;
-        $this->setCategoria($category);
+
+        try {
+            $this->setCategoria($category);
+        } catch (Exception $e) {
+            echo "Errore: " . $e->getMessage();
+        }
+
         $this->image = $image;
     }
 
@@ -20,24 +26,22 @@ class Product{
         if (in_array($category, $allowedCategory)) {
             $this->category = $category;
         } else {
-            return "no";
+            throw new Exception("La categoria non è valida");
         }
-    }  
-    
-    public function getFlag()
-    {
+    }
+
+    public function getFlag() {
         $flags = [
             'en' => './img/en.png',  
             'it' => './img/it.png', 
             'fr' => './img/fr.png', 
             'de' => './img/de.png', 
-            
         ];
-    
+
         if (array_key_exists($this->nationality, $flags)) {
             return $flags[$this->nationality];
         }
-    
+
         return 'default';
     }
 }
